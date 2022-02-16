@@ -31,7 +31,7 @@ class EmployeesController {
       message: 'The login or password is incorrect.'
     }
     const body = req.body
-    Employees.findOne({ where: { Employeesname: body.login } })
+    Employees.findOne({ where: { login: body.login } })
       .then(Employees => {
         if (!Employees) {
           return res.status(400).json(error)
