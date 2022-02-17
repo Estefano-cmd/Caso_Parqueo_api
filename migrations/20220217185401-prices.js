@@ -1,9 +1,9 @@
-'use strict'
+'use strict';
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable(
-      'employees',
+      'prices',
       {
         id: {
           type: Sequelize.INTEGER,
@@ -11,38 +11,18 @@ module.exports = {
           primaryKey: true,
           allowNull: false
         },
-        fullname: {
-          type: Sequelize.STRING,
+        description: {
+          type: Sequelize.TEXT,
           allowNull: false
         },
-        avatar: {
-          type: Sequelize.BLOB('medium'),
-          allowNull: false
-        },
-        email: {
-          type: Sequelize.STRING,
-          allowNull: false
-        },
-        direction: {
-          type: Sequelize.STRING,
-          allowNull: false
-        },
-        login: {
-          type: Sequelize.STRING,
-          allowNull: false
-        },
-        password: {
-          type: Sequelize.STRING,
+        amount: {
+          type: Sequelize.FLOAT,
           allowNull: false
         },
         enabled: {
           type: Sequelize.BOOLEAN,
           allowNull: false,
           defaultValue: true
-        },
-        roles: {
-          type: Sequelize.TEXT,
-          allowNull: false
         },
         createdAt: Sequelize.DATE,
         updatedAt: Sequelize.DATE
@@ -55,6 +35,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('employees')
+    return queryInterface.dropTable('prices')
   }
-}
+};

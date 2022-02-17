@@ -1,9 +1,9 @@
-'use strict'
+'use strict';
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable(
-      'employees',
+      'subscribers',
       {
         id: {
           type: Sequelize.INTEGER,
@@ -11,27 +11,15 @@ module.exports = {
           primaryKey: true,
           allowNull: false
         },
-        fullname: {
-          type: Sequelize.STRING,
-          allowNull: false
-        },
-        avatar: {
-          type: Sequelize.BLOB('medium'),
-          allowNull: false
-        },
         email: {
           type: Sequelize.STRING,
-          allowNull: false
+          allowNull: true
         },
         direction: {
           type: Sequelize.STRING,
-          allowNull: false
+          allowNull: true
         },
-        login: {
-          type: Sequelize.STRING,
-          allowNull: false
-        },
-        password: {
+        phone: {
           type: Sequelize.STRING,
           allowNull: false
         },
@@ -40,9 +28,13 @@ module.exports = {
           allowNull: false,
           defaultValue: true
         },
-        roles: {
-          type: Sequelize.TEXT,
-          allowNull: false
+        clientId: {
+          type: Sequelize.INTEGER,
+          allowNull: false,
+          references: {
+            model: "clients",
+            key: "id"
+          }
         },
         createdAt: Sequelize.DATE,
         updatedAt: Sequelize.DATE
@@ -55,6 +47,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('employees')
+    return queryInterface.dropTable('subscribers')
   }
-}
+};

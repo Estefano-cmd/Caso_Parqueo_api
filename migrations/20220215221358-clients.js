@@ -19,17 +19,10 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        age: {
-          type: Sequelize.INTEGER,
+        enabled: {
+          type: Sequelize.BOOLEAN,
           allowNull: false,
-        },
-        phone: {
-          type: Sequelize.STRING,
-          allowNull: false
-        },
-        email: {
-          type: Sequelize.STRING,
-          allowNull: true
+          defaultValue: true
         },
         createdAt: Sequelize.DATE,
         updatedAt: Sequelize.DATE
