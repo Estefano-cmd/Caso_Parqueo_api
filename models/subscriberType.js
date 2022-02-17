@@ -2,7 +2,7 @@
 
 module.exports = (sequelize, DataTypes) => {
   const client = sequelize.define(
-    "clients",
+    "subscriberTypes",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -12,20 +12,20 @@ module.exports = (sequelize, DataTypes) => {
       },
       name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: false
       },
-      surnames: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      price: {
+        type: DataTypes.FLOAT,
+        allowNull: false
       },
       enabled: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
-        defaultValue: 1
-      }
+        defaultValue: true
+      },
     },
     {
-      tableName: "clients",
+      tableName: "subscriberTypes",
       defaultScope: {
         attributes: { exclude: ['createdAt', 'updatedAt'] }
       }

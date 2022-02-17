@@ -1,8 +1,8 @@
 "use strict";
 
 module.exports = (sequelize, DataTypes) => {
-  const client = sequelize.define(
-    "clients",
+  const price = sequelize.define(
+    "prices",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -10,27 +10,27 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         allowNull: false,
       },
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      description: {
+        type: DataTypes.TEXT,
+        allowNull: false
       },
-      surnames: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      amount: {
+        type: DataTypes.FLOAT,
+        allowNull: false
       },
       enabled: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
-        defaultValue: 1
-      }
+        defaultValue: true
+      },
     },
     {
-      tableName: "clients",
+      tableName: "prices",
       defaultScope: {
         attributes: { exclude: ['createdAt', 'updatedAt'] }
       }
     }
   );
 
-  return client;
+  return price;
 };
