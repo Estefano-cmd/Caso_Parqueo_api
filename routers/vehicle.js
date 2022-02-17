@@ -12,6 +12,10 @@ router
   .post(vehicleController.create)
 
 router
+  .route('/licensePlate/:licensePlate')
+  .get(vehicleController.findOneByLicensePlate)
+
+router
   .route('/:id')
   .get(vehicleController.findOne)
   .patch(vehicleController.update)

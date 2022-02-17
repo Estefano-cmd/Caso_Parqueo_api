@@ -19,6 +19,16 @@ class VehicleController {
       .catch(err => next(err))
   }
 
+  findOneByLicensePlate (req, res, next) {
+    const licensePlate = req.params.licensePlate;
+   
+    Vehicle.findOne({ where: { licensePlate } })
+      .then(vehicles => {
+        res.json(vehicles)
+      })
+      .catch(err => next(err))
+  }
+
   create (req, res, next) {
     Vehicle.create(req.body)
       .then(() => res.status(201).end())
