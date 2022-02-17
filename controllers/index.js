@@ -2,6 +2,7 @@ const EmployeesController = require('./employees')
 const ClientController = require('./client') 
 const VehicleController = require('./vehicle')
 const SubscriberController = require('./subscriber')
+const SubscriptionController = require('./subscription')
 const PriceController = require('./price')
 
 module.exports = {
@@ -9,5 +10,6 @@ module.exports = {
   ClientController,
   VehicleController,
   SubscriberController,
-  PriceController
+  PriceController,
+  SubscriptionController
 }
