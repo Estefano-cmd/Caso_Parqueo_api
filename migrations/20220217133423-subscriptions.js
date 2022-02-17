@@ -26,11 +26,11 @@ module.exports = {
             key: "id"
           }
         },
-        subscriberTypeId: {
+        subscriptionTypeId: {
           type: Sequelize.INTEGER,
           allowNull: false,
           references: {
-            model: "subscriberTypes",
+            model: "subscriptionTypes",
             key: "id"
           }
         },

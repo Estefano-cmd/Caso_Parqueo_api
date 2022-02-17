@@ -11,11 +11,14 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       dateEntry: DataTypes.DATE,
-      dateExit: DataTypes.DATE,
+      dateExit: {
+        type: DataTypes.DATE,
+        allowNull: true
+      },
       place: DataTypes.STRING,
       total: {
         type: DataTypes.FLOAT,
-        allowNull: false
+        allowNull: true
       },
       enabled: {
         type: DataTypes.BOOLEAN,

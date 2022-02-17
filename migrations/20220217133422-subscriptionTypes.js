@@ -3,7 +3,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable(
-      'subscriberTypes',
+      'subscriptionTypes',
       {
         id: {
           type: Sequelize.INTEGER,
@@ -35,6 +35,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('subscriberTypes')
+    return queryInterface.dropTable('subscriptionTypes')
   }
 };

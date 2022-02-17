@@ -12,11 +12,14 @@ module.exports = {
           allowNull: false
         },
         dateEntry: Sequelize.DATE,
-        dateExit: Sequelize.DATE,
+        dateExit: {
+          type: Sequelize.DATE,
+          allowNull: true
+        },
         place: Sequelize.STRING,
         total: {
           type: Sequelize.FLOAT,
-          allowNull: false
+          allowNull: true
         },
         enabled: {
           type: Sequelize.BOOLEAN,
