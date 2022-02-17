@@ -2,7 +2,7 @@
 
 module.exports = (sequelize, DataTypes) => {
   const client = sequelize.define(
-    "subscriberTypes",
+    "subscriptionTypes",
     {
       id: {
         type: DataTypes.INTEGER,
@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     {
-      tableName: "subscriberTypes",
+      tableName: "subscriptionTypes",
       defaultScope: {
         attributes: { exclude: ['createdAt', 'updatedAt'] }
       }

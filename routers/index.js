@@ -6,6 +6,7 @@ const { vehicleChildRouter } = require('./vehicle')
 const { subscriberChildRouter } = require('./subscriber')
 const { priceChildRouter } = require('./price')
 const { subscriptionChildRouter } = require('./subscription')
+const { subscriptionTypeChildRouter } = require('./subscriptionType')
 const { registerChildRouter } = require('./register')
 
 const express = require('express')
@@ -18,6 +19,7 @@ router.use('/vehicle', vehicleChildRouter)
 router.use('/subscriber', subscriberChildRouter)
 router.use('/price', priceChildRouter)
 router.use('/subscription', subscriptionChildRouter)
+router.use('/subscriptionType', subscriptionTypeChildRouter)
 router.use('/register', registerChildRouter)
 
 module.exports = router

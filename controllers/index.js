@@ -3,6 +3,7 @@ const ClientController = require('./client')
 const VehicleController = require('./vehicle')
 const SubscriberController = require('./subscriber')
 const SubscriptionController = require('./subscription')
+const SubscriptionTypeController = require('./subscriptionType')
 const PriceController = require('./price')
 const RegisterController = require('./register')
 
@@ -13,5 +14,6 @@ module.exports = {
   SubscriberController,
   PriceController,
   SubscriptionController,
+  SubscriptionTypeController,
   RegisterController
 }
