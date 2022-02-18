@@ -17,9 +17,9 @@ module.exports = (sequelize, DataTypes) => {
         field: 'subscriberId',
         primaryKey: true
       },
-      subscriberTypeId: {
+      subscriptionTypeId: {
         type: DataTypes.INTEGER,
-        field: 'subscriberTypeId',
+        field: 'subscriptionTypeId',
         primaryKey: true
       },
     },

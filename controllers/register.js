@@ -31,7 +31,7 @@ class RegisterController {
 
   create (req, res, next) {
     Register.create(req.body)
-      .then(() => res.status(201).end())
+      .then((data) => res.status(201).json(data))
       .catch(err => next(err))
   }
 

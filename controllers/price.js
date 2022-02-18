@@ -22,7 +22,7 @@ class PriceController {
 
   create (req, res, next) {
     Price.create(req.body)
-      .then(() => res.status(201).end())
+      .then((data) => res.status(201).json(data))
       .catch(err => next(err))
   }
 
