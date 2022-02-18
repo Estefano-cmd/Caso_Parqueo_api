@@ -27,7 +27,8 @@ module.exports = (sequelize, DataTypes) => {
       priceId: {
         type: DataTypes.INTEGER,
         field: 'priceId',
-        primaryKey: true
+        primaryKey: true,
+        allowNull: true
       },
       clientId: {
         type: DataTypes.INTEGER,

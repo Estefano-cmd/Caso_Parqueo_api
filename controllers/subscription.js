@@ -19,7 +19,7 @@ class SubscriptionController {
   }
 
   findOne (req, res, next) {
-    Subscription.findOne({ where: { id: req.params.id } })
+    Subscription.findOne({ where: { subscriberId: req.params.id } })
       .then(data => {
         res.json(data)
       })

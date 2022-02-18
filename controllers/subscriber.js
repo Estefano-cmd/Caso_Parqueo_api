@@ -13,7 +13,7 @@ class SubscriberController {
   }
 
   findOne (req, res, next) {
-    Subscriber.findOne({ where: { id: req.params.id } })
+    Subscriber.findOne({ where: { clientId: req.params.id } })
       .then(data => {
         res.json(data)
       })
