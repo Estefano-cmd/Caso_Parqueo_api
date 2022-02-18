@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = (sequelize, DataTypes) => {
-  const subscription = sequelize.define(
+  const register = sequelize.define(
     "registers",
     {
       id: {
@@ -47,5 +47,20 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  return subscription;
+  register.associate = function (models) {
+    register.belongsTo(models.clients, {
+      foreignKey: 'clientId',
+      constraints: false
+    })
+    register.belongsTo(models.prices, {
+      foreignKey: 'priceId',
+      constraints: false
+    }),
+    register.belongsTo(models.employees, {
+      foreignKey: 'employeId',
+      constraints: false
+    })
+  }
+
+  return register;
 };

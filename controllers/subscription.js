@@ -1,11 +1,17 @@
 'use strict'
 
 const Subscription = require('../models').subscriptions
-
+const Subscriber = require('../models').subscribers
+const SubscriptionType = require('../models').subscriptionTypes
 class SubscriptionController {
 
   findAll (req, res, next) {
-    Subscription.findAll()
+    Subscription.findAll({
+      include: [
+        { model: Subscriber },
+        { model: SubscriptionType }
+      ],
+    })
       .then(data => {
         res.json(data)
       })

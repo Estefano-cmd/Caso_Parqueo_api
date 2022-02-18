@@ -1,10 +1,19 @@
 'use strict'
 
 const Register = require('../models').registers
+const Client = require('../models').clients
+const Price = require('../models').prices
+const Employees = require('../models').employees
 
 class RegisterController {
   findAll (req, res, next) {
-    Register.findAll()
+    Register.findAll({
+      include: [
+        { model: Client },
+        { model: Price },
+        { model: Employees}
+      ],
+    })
       .then(data => {
         res.json(data)
       })
