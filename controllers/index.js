@@ -6,6 +6,7 @@ const SubscriptionController = require('./subscription')
 const SubscriptionTypeController = require('./subscriptionType')
 const PriceController = require('./price')
 const RegisterController = require('./register')
+const PlacesController = require('./places')
 
 module.exports = {
   EmployeesController,
@@ -15,5 +16,6 @@ module.exports = {
   PriceController,
   SubscriptionController,
   SubscriptionTypeController,
-  RegisterController
+  RegisterController,
+  PlacesController
 }
