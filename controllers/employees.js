@@ -28,7 +28,7 @@ class EmployeesController {
   login (req, res, next) {
     const error = {
       name: 'Authentication Error.',
-      message: 'The login or password is incorrect.'
+      message: 'El usuario/contraseña es incorrecto!'
     }
     const body = req.body
     Employees.findOne({ where: { login: body.login } })
