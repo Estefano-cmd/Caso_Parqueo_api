@@ -62,7 +62,7 @@ class EmployeesController {
     body.roles = body.roles || JSON.stringify(['role1'])
     body.enabled = true
     Employees.create(body)
-      .then(() => res.status(201).end())
+      .then((data) => res.status(201).json(data))
       .catch(err => next(err))
   }
 
