@@ -12,6 +12,17 @@ class PlacesController {
       .catch(err => next(err))
   }
 
+  findByState (req, res, next) {
+    const state = req.params.state
+    console.log(state);
+
+    Places.findOne({ where: { state } })
+      .then(places => {
+        res.json(places)
+      })
+      .catch(err => next(err))
+  }
+
   findOne (req, res, next) {
     Places.findOne({ where: { id: req.params.id } })
       .then(places => {
@@ -27,8 +38,9 @@ class PlacesController {
   }
 
   update (req, res, next) {
-    const { state } = req.body
-    Places.update(state, { where: { id: req.params.id } })
+    const state = req.body.state
+
+    Places.update({ state }, { where: { id: req.params.id } })
       .then(() => res.status(200).end())
       .catch(err => next(err))
   }

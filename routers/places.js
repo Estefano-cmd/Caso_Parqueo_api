@@ -12,9 +12,14 @@ router
   .post(placesController.create)
 
 router
+  .route('/state/:state')
+  .get(placesController.findByState)
+
+router
   .route('/:id')
   .get(placesController.findOne)
   .patch(placesController.update)
+
 
 module.exports = {
   placesChildRouter: router
