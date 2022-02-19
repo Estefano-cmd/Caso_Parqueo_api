@@ -20,6 +20,8 @@ module.exports = {
           allowNull: false,
           defaultValue: 0
         },
+        createdAt: Sequelize.DATE,
+        updatedAt: Sequelize.DATE
       },
       {
         engine: 'InnoDB',

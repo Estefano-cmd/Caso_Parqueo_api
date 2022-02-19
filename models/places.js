@@ -23,10 +23,8 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     {
+      timestamp: false,
       tableName: "places",
-      defaultScope: {
-        attributes: { exclude: ["createdAt", "updatedAt"] },
-      },
     }
   );
 
