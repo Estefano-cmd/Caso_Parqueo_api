@@ -1,7 +1,5 @@
 "use strict";
 
-//const places = require("../routers/places")
-
 module.exports = (sequelize, DataTypes) => {
   const place = sequelize.define(
     "places",
@@ -19,14 +17,12 @@ module.exports = (sequelize, DataTypes) => {
       state: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
-        defaultValue: 0,
-      },
+        defaultValue: 0
+      }
     },
     {
-      tableName: "places",
-      defaultScope: {
-        attributes: { exclude: ["createdAt", "updatedAt"] },
-      },
+      timestamps: false,
+      tableName: "places"
     }
   );
 

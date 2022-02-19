@@ -21,6 +21,7 @@ class PlacesController {
   }
 
   create (req, res, next) {
+    console.log("body", req.body)
     Places.create(req.body)
       .then((data) => res.status(201).json(data))
       .catch(err => next(err))
