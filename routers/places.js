@@ -12,6 +12,10 @@ router
   .post(placesController.create)
 
 router
+  .route('/name/:name')
+  .get(placesController.findOneByName)
+
+router
   .route('/state/:state')
   .get(placesController.findByState)
 

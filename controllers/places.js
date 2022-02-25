@@ -31,6 +31,14 @@ class PlacesController {
       .catch(err => next(err))
   }
 
+  findOneByName (req, res, next) {
+    Places.findOne({ where: { fullname: req.params.name } })
+      .then(places => {
+        res.json(places)
+      })
+      .catch(err => next(err))
+  }
+
   create (req, res, next) {
     Places.create(req.body)
       .then((data) => res.status(201).json(data))
