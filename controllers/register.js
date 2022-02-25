@@ -28,6 +28,27 @@ class RegisterController {
       .catch(err => next(err))
   }
 
+  findOneByClientId (req, res, next) {
+    Register.findOne({ where: { clientId: req.params.id } })
+      .then(data => {
+        res.json(data)
+      })
+      .catch(err => next(err))
+  }
+
+  findOneByPlace(req, res, next) {
+    Register.findOne({
+      include: [
+        { model: Client }
+      ],
+      where: { place: req.params.place }
+    })
+      .then(data => {
+        res.json(data)
+      })
+      .catch(err => next(err))
+  }
+
   findOneByLicensePlate (req, res, next) {
     const licensePlate = req.params.licensePlate;
    

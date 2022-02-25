@@ -16,7 +16,7 @@ class PlacesController {
     const state = req.params.state
     console.log(state);
 
-    Places.findOne({ where: { state } })
+    Places.findAll({ where: { state } })
       .then(places => {
         res.json(places)
       })

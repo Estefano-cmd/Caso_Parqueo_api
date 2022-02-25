@@ -12,6 +12,14 @@ router
   .post(registerController.create)
 
 router
+  .route('/client/:id')
+  .get(registerController.findOneByClientId)
+
+  router
+  .route('/place/:place')
+  .get(registerController.findOneByPlace)
+
+router
   .route('/:id')
   .get(registerController.findOne)
   .patch(registerController.update)
