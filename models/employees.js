@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     fullname: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.STRING,
       allowNull: false
     },
     avatar: {
@@ -17,19 +17,19 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     email: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.STRING,
       allowNull: false
     },
     direction: {
-      type: DataTypes.STRING(50),
+      type: DataTypes.STRING,
       allowNull: false
     },
     login: {
-      type: DataTypes.STRING(10),
+      type: DataTypes.STRING,
       allowNull: false
     },
     password: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.STRING,
       allowNull: false
     },
     enabled: {
