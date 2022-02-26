@@ -11,8 +11,8 @@ module.exports = {
           primaryKey: true,
           allowNull: false
         },
-        fullname: {
-          type: Sequelize.STRING,
+        name: {
+          type: Sequelize.STRING(2),
           allowNull: false
         },
         state: {

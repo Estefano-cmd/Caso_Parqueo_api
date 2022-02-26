@@ -12,7 +12,7 @@ module.exports = {
           allowNull: false
         },
         fullname: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING(50),
           allowNull: false
         },
         avatar: {
@@ -20,19 +20,20 @@ module.exports = {
           allowNull: false
         },
         email: {
-          type: Sequelize.STRING,
-          allowNull: false
+          type: Sequelize.STRING(50),
+          allowNull: false,
+          unique: true
         },
         direction: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING(50),
           allowNull: false
         },
         login: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING(10),
           allowNull: false
         },
         password: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING(20),
           allowNull: false
         },
         enabled: {

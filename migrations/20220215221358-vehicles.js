@@ -12,19 +12,20 @@ module.exports = {
           allowNull: false
         },
         licensePlate: {
-          type: Sequelize.STRING,
-          allowNull: false
+          type: Sequelize.STRING(10),
+          allowNull: false,
+          unique: true
         },
         color: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING(10),
           allowNull: false
         },
         model: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING(15),
           allowNull: false
         },
         marca: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING(15),
           allowNull: false
         },
         clientId: {

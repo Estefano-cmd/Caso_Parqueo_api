@@ -12,7 +12,7 @@ module.exports = {
           allowNull: false
         },
         description: {
-          type: Sequelize.TEXT,
+          type: Sequelize.STRING(50),
           allowNull: false
         },
         amount: {

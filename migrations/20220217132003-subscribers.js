@@ -12,15 +12,15 @@ module.exports = {
           allowNull: false
         },
         email: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING(50),
           allowNull: true
         },
         direction: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING(50),
           allowNull: true
         },
         phone: {
-          type: Sequelize.STRING,
+          type: Sequelize.STRING(8),
           allowNull: false
         },
         enabled: {

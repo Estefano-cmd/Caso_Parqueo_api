@@ -12,7 +12,7 @@ module.exports = {
           allowNull: false
         },
         name: {
-          type: Sequelize.STRING,
+          type: Sequelize.ENUM('Abonado','Abonado VIP'),
           allowNull: false
         },
         price: {

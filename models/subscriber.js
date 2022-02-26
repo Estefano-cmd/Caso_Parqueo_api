@@ -11,15 +11,15 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       email: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(50),
         allowNull: true
       },
       direction: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(50),
         allowNull: true
       },
       phone: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(8),
         allowNull: false
       },
       enabled: {

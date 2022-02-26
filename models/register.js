@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         allowNull: true
       },
-      place: DataTypes.STRING,
       total: {
         type: DataTypes.FLOAT,
         allowNull: true
@@ -29,6 +28,11 @@ module.exports = (sequelize, DataTypes) => {
         field: 'priceId',
         primaryKey: true,
         allowNull: true
+      },
+      placeId: {
+        type: DataTypes.INTEGER,
+        field: 'placeId',
+        primaryKey: true
       },
       clientId: {
         type: DataTypes.INTEGER,

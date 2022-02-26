@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       name: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(20),
         allowNull: false,
       },
       surnames: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(30),
         allowNull: false,
       },
       enabled: {

@@ -16,7 +16,6 @@ module.exports = {
           type: Sequelize.DATE,
           allowNull: true
         },
-        place: Sequelize.STRING,
         total: {
           type: Sequelize.FLOAT,
           allowNull: true
@@ -24,6 +23,14 @@ module.exports = {
         enabled: {
           type: Sequelize.BOOLEAN,
           allowNull: false
+        },
+        placeId: {
+          type: Sequelize.INTEGER,
+          allowNull: true,
+          references: {
+            model: "places",
+            key: "id"
+          }
         },
         priceId: {
           type: Sequelize.INTEGER,

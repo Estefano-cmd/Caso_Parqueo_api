@@ -1,27 +1,27 @@
 {
     "development": {
       "username": "root",
-      "password": "P@ndasonico123",
+      "password": null,
       "database": "db_parqueo",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
-      "password": "P@ndasonico123",
+      "password": null,
       "database": "db_parqueo",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
     "production": {
       "username": "root",
-      "password": "P@ndasonico123",
+      "password": null,
       "database": "db_parqueo",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
     "settings": {
       "morgan": "combined",
-      "port": 3000
+      "port": 3005
     }
   }

@@ -11,19 +11,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       licensePlate: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(10),
         allowNull: false
       },
       color: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(10),
         allowNull: false
       },
       model: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(15),
         allowNull: false
       },
       marca: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(15),
         allowNull: false
       },
       clientId: {

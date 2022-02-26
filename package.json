@@ -8,7 +8,7 @@
     "lint": "standard",
     "lint:fix": "standard -- --fix",
     "start": "node server.js",
-    "migrate": "./node_modules/.bin/sequelize db:migrate --url=mysql://root:P@ndasonico123@127.0.0.1/db_parqueo"
+    "migrate": "./node_modules/.bin/sequelize db:migrate --url=mysql://root@127.0.0.1/db_parqueo"
   },
   "author": "",
   "license": "ISC",
