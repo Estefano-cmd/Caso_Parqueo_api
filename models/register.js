@@ -65,6 +65,10 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'employeId',
       constraints: false
     })
+    register.belongsTo(models.places, {
+      foreignKey: 'placeId',
+      constraints: false
+    })
   }
 
   return register;

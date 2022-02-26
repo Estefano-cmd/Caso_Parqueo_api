@@ -3,12 +3,18 @@
 const Register = require("../models").registers;
 const Client = require("../models").clients;
 const Price = require("../models").prices;
+const Place = require("../models").places;
 const Employees = require("../models").employees;
 
 class RegisterController {
   findAll(req, res, next) {
     Register.findAll({
-      include: [{ model: Client }, { model: Price }, { model: Employees }],
+      include: [
+        { model: Client },
+        { model: Price },
+        { model: Employees },
+        { model: Place }
+      ],
     })
       .then((data) => {
         res.json(data);
@@ -17,7 +23,15 @@ class RegisterController {
   }
 
   findOne(req, res, next) {
-    Register.findOne({ where: { id: req.params.id } })
+    Register.findOne({
+      where: { id: req.params.id },
+      include: [
+        { model: Client },
+        { model: Price },
+        { model: Employees },
+        { model: Place }
+      ],
+    })
       .then((data) => {
         res.json(data);
       })
@@ -25,22 +39,28 @@ class RegisterController {
   }
 
   findOneByClientId(req, res, next) {
-    Register.findOne({ where: { clientId: req.params.id } })
+    Register.findOne({ 
+      where: { clientId: req.params.id, dateExit: null },
+      include: [
+        { model: Client },
+        { model: Price },
+        { model: Employees },
+        { model: Place }
+      ]
+    })
       .then((data) => {
         res.json(data);
       })
       .catch((err) => next(err));
   }
 
-  findOneByPlace(req, res, next) {
+  findOneByPlaceId(req, res, next) {
     Register.findOne({
       include: [{ model: Client }],
       where: {
-        place: req.params.place,
+        placeId: req.params.id
       },
-      order: [
-        ["id", "DESC"]
-      ],
+      order: [["id", "DESC"]],
     })
       .then((data) => {
         res.json(data);

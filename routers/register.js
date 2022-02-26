@@ -16,8 +16,8 @@ router
   .get(registerController.findOneByClientId)
 
   router
-  .route('/place/:place')
-  .get(registerController.findOneByPlace)
+  .route('/place/:id')
+  .get(registerController.findOneByPlaceId)
 
 router
   .route('/:id')
